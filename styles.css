@@ -1,0 +1,782 @@
+/* Reset some default browser styles and set Montserrat as default font */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+body, h1, h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #000000;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #000000;   
+}
+
+
+p {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0;
+}
+
+/* Headers */
+
+.home-page header {
+    padding: 70px 0 150px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.home-page header h1,
+.home-page header h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: black;
+}
+
+.home-page header h1 {
+    border-top: 5px solid;
+    display: inline-block;
+    padding: 24px 710px 0 0;
+}
+
+.home-page header .link-item {
+    position: absolute;
+    top: -10px;
+    right: 0;
+}
+
+.link-item a {
+    color: black; 
+    text-decoration: none;
+}
+
+.link-item a:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 780px) {
+    body {
+        margin: 0 20px;
+    }
+    .home-page header h1 {
+       padding: 20px 0 0;
+       display: block; 
+    }
+    .home-page header .link-item {
+        left: 0;
+        top: -40px;
+    }
+
+    .link-item a {
+        color: white;
+        text-decoration: none;
+        background: black;
+        padding: 7px;
+    }
+}
+
+
+
+.detail-page .header-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px  auto 0;
+    padding: 0 10px; /* Adjust the padding for spacing inside the container */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.detail-page .name-title {
+    font-size: 1rem; /* Adjust the size as needed */
+    color: black;
+    margin-right: 10px; /* Spacing from the text to the line */
+}
+
+.detail-page .header-line {
+    flex-grow: 1; /* Line grows to take up remaining space */
+    height: 5px;
+    background-color: black;
+    margin: 0 10px; /* Spacing from text to line and line to links */
+}
+
+.detail-page .header-nav {
+    white-space: nowrap; /* Ensures the nav links stay in one line */
+}
+
+.detail-page .header-nav a {
+    font-size: 1rem; /* Adjust the size as needed */
+    color: black;
+    text-decoration: none;
+    padding: 0 10px; /* Adjust spacing between links if necessary */
+}
+
+.detail-page .header-nav a:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 780px) {
+
+    .detail-page .header-content {
+        display: block;
+        border-top: 5px solid;
+        padding: 20px 0;
+        margin-top: 70px;
+
+    }
+
+    .detail-page .header-line {
+        display: none;
+    }
+
+    .header-nav {
+        position: relative;
+        top: -80px;
+    }
+    .detail-page .header-nav a {
+        background: black;
+        color: white;
+        padding: 7px;
+        margin: 0 10px 0 0;
+    }
+}
+
+/******************************************* HOME */
+
+
+
+/* Styles for the background zig-zag */
+
+.diagonal {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    background: #6fc;
+    display: block;
+    height: 1000px;
+    position: absolute;
+    width: 38.2%;
+    z-index: -1000
+}
+
+.d-one {
+    -webkit-transform: skewX(30deg);
+    transform: skewX(30deg);
+    top: 270px;
+}
+
+.d-two {
+    -webkit-transform: skewX(332deg);
+    transform: skewX(332deg);
+    top: 1270px;
+    left: 758px;
+}
+
+.d-three {
+    -webkit-transform: skewX(30deg);
+    transform: skewX(32deg);
+    top: 1310px;
+}
+
+
+/* Content */
+
+
+.block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px; /* spacing between each block */
+    max-width: 1200px;
+}
+
+.block:last-child {
+    margin-bottom: 80px;
+}
+
+
+.img-col,
+.text-col {
+    flex: 1;
+}
+
+.img-col {
+    flex-basis: 40%;
+}
+
+/* Resets the default padding */
+.img-col,
+.text-col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* If img-col is followed by text-col, add padding to the right of img-col */
+.img-col + .text-col {
+    padding-left: 4%;
+}
+
+/* If text-col is followed by img-col, add padding to the right of text-col */
+.text-col + .img-col {
+    padding-left: 4%;
+}
+
+
+.img-col img {
+    height: auto;
+    display: block;
+}
+
+.text-item {
+    margin-bottom: 24px;
+}
+
+.text-item h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    position: relative;
+}
+
+.text-item h2:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.5px;
+    background-color: #ccc;
+    margin-top: 5px;
+}
+
+.text-header,
+.text-description p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0; /* Adjust for spacing */
+}
+
+.text-description a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+
+.text-description p {
+    line-height: 1.8;
+}
+
+
+@media (max-width: 780px) {
+    .block {
+        display: block;
+    }
+    .img-col + .text-col {
+        padding-left: 0;
+    }
+}
+
+
+
+/* arrow interactions */
+
+
+.text-description:hover a span {
+    animation: moveArrow 2.5s infinite;
+}
+
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.text-description a span {
+    display: inline-block;
+}
+
+.text-description a span {
+    font-size: 1.5rem;  /* Adjust this value to make the arrow bigger or smaller */
+}
+
+
+/******************************************* DEVEX */
+
+
+
+/* intro */
+
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 100px;
+}
+
+.intro .title {
+    flex-basis: 40%;
+    padding-right: 2%;
+}
+
+.intro .title h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.intro .title p {
+    font-weight: 500;
+    border-top: 0.5px solid #ccc;
+    padding-top: 10px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.intro .description {
+    flex-basis: 58%; /* Since 2% is used for padding in title */
+}
+
+.intro .description p {
+    line-height: 1.5rem;
+}
+
+
+.col-wrap {
+    display: flex;
+}
+
+.detail-description {
+    margin-top: 100px;
+}
+
+.detail-description h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    border-bottom: 0.5px solid #ccc;
+    padding-bottom: 10px;
+    margin-top: 5px;
+}
+
+.detail-description p {
+    line-height: 1.7rem;
+}
+
+.detail-description .column {
+    flex: 1;
+}
+
+.detail-description .column.text-column {
+    padding-right: 20px;
+}
+
+.detail-description .column.image-column {
+    padding-left: 20px;
+}
+
+
+.detail-description .image-column img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.background .detail-description {
+    margin-top: 0;
+}
+
+.paragraph-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.paragraph-wrap span {
+    display: block;
+    font-weight: bold;
+}
+
+.paragraph-wrap p {
+    flex-basis: calc(50% - 8px); /* Adjust the percentage and subtract twice the desired spacing divided by 3 */
+    text-align: left;
+}
+
+.paragraph-wrap p:not(:first-child) {
+    margin-left: 24px;
+}
+
+
+@media (max-width: 780px) {
+    .intro {
+        display: block;
+    }
+    .intro .title {
+        margin-bottom: 70px;
+    }
+
+    .col-wrap {
+        display: block;
+    }
+}
+
+
+/* Carrousel */
+
+
+.simple-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    overflow: hidden;
+
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slides img {
+    max-width: 100%;
+    display: block;
+    width: 100%; /* Full width of the container */
+    display: block;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    border: none;
+    cursor: pointer;
+
+    padding: 12px 16px 17px;
+    font-size: 1.5rem;
+}
+
+.carousel-prev {
+    left: 0;
+    color: white;
+}
+
+.carousel-next {
+    right: 0;
+    color: white;
+}
+
+
+
+/* Footer navigation */
+
+
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+}
+
+.project-nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+
+.project-nav a span {
+    display: inline-block;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.project-nav .prev-project:hover span {
+    animation: moveArrowLeft 2.5s infinite;
+}
+
+.project-nav .next-project:hover span {
+    animation: moveArrowRight 2.5s infinite;
+}
+
+@keyframes moveArrowRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveArrowLeft {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+/* befor and after Slider  */
+
+
+.before-after-container {
+    position: relative;
+    max-width: 1200px; /* It can be up to 1200px wide */
+    width: 100%; /* It takes the full width of its parent */
+    padding-bottom: 100%;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.before-img, .after-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+}
+
+.before-img {
+    z-index: 2;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+
+.slider {
+    width: 3px; 
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    cursor: ew-resize;
+    z-index: 3;
+}
+
+.slider::before, 
+.slider::after {
+    content: '◀'; /* Arrow character */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 24px;
+}
+
+.slider::after {
+    content: '▶'; /* Arrow character */
+    right: -26px; /* Adjust distance from the slider */
+}
+
+.slider::before {
+    left: -26px; /* Adjust distance from the slider */
+}
+
+.slider .grabber {
+    content: "";
+    width: 7px;
+    height: 30px; /* Adjust the height as needed */
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.caption {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: black;
+}
+
+/* This is a media query for screens smaller than 600px in width */
+@media (max-width: 600px) {
+    .slider::before, 
+    .slider::after {
+        font-size: 12px;
+    }
+    .slider .grabber {
+        height: 20px;
+    }
+}
+
+
+
+/******************************************* HITCH HQ */
+
+.image-intro {
+    margin-top: 100px;
+}
+
+.col-3 {
+    display: flex;
+    justify-content: space-between; /* Keeps columns at the edges */
+    margin-top: 50px;
+}
+
+.col-3 .wrap {
+    flex-basis: calc(30% - 15px); /* Adjust for more space between columns */
+    max-width: calc(30% - 15px); /* Adjust for more space between columns */
+    display: flex;
+    flex-direction: column;
+}
+
+.col-3 .wrap img {
+    width: 100%;
+    height: auto;
+}
+
+.download-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+}
+
+.download-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.download-wrap p {
+    margin-bottom: 10px;
+/*    font-size: 1.5rem;*/
+    font-weight: bold;
+/*    line-height: 2.5rem;*/
+}
+
+
+.download-wrap button {
+    background-color: #615fff;
+    color: white;
+    border: none;
+    padding: 20px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.download-wrap button:hover {
+    background-color: #4e4cd4;
+}
+
+@media (max-width: 780px) {
+    .col-3,
+    .col-3 .wrap,
+    .paragraph-wrap {
+        display: block;
+    }
+
+    .col-3 .wrap {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .col-3 .wrap h3 {
+        margin: 0;
+    }
+
+    .col-3 .wrap img {
+        max-width: 50%;
+    }
+
+    .paragraph-wrap p:not(:first-child) {
+        margin: 0;
+    }
+
+    .paragraph-wrap span {
+        margin-top: 40px;
+    }
+
+    .download-section {
+        padding: 40px 0;
+    }
+
+}
+
+/******************************************* About me */
+
+
+.me-photo {
+    width: 80%;
+    float: right;
+}
+
+.songs {
+    margin-bottom: 100px;
+}
+
+.songs iframe {
+    margin: 20px 0;
+}
+
+@media (max-width: 780px) {
+
+    .detail-description .image-column img {
+        float: none;
+        max-width: 50%;
+        margin-top: 20px;
+    }
+    .detail-description .column.image-column {
+        padding: 0;
+    }
+}
