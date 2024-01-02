@@ -210,6 +210,12 @@ img {
 /* Content */
 
 
+
+.home-page .block:last-child {
+    margin-bottom: 70px; /* spacing between each block */
+
+}
+
 .block {
     display: flex;
     justify-content: space-between;
@@ -762,7 +768,7 @@ img {
 }
 
 .songs {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 .songs iframe {
@@ -779,4 +785,19 @@ img {
     .detail-description .column.image-column {
         padding: 0;
     }
+}
+
+
+/******************************************* footer */
+
+
+footer {
+    margin-bottom: 20px;
+}
+
+footer a {
+    margin-right: 10px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
 }
