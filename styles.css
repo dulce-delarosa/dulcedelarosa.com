@@ -40,6 +40,10 @@ img {
     padding: 0;
 }
 
+.tab-panel p {
+    line-height: 1.5rem;
+}
+
 /* Headers */
 
 .home-page header {
@@ -197,13 +201,20 @@ img {
     -webkit-transform: skewX(332deg);
     transform: skewX(332deg);
     top: 1270px;
-    left: 758px;
+    left: 732px;
 }
 
 .d-three {
+    -webkit-transform: skewX(332deg);
+    transform: skewX(332deg);
+    top: 1270px;
+    left: 732px;}
+
+.d-four {
     -webkit-transform: skewX(30deg);
     transform: skewX(32deg);
-    top: 1310px;
+    top: 2270px;
+    left: 200px;
 }
 
 
@@ -339,6 +350,82 @@ img {
 }
 
 
+/******************************************* Oracle Netsuite */
+
+/* Tabs */
+
+.tab-intro {
+    margin-top: 5%;
+}
+
+.vertical-tabs {
+  margin-top: 7%;
+}
+
+.tab-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tab-panel.active {
+  display: block;
+  opacity: 1;
+}
+
+.tabs-menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 7%;
+}
+
+.tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 2% 0 1%;
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: #000;
+}
+
+.tab-btn.active {
+  color: #000;
+  font-weight: 500;
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 33.33%; /* since there are 3 tabs */
+  height: 2px;
+  background: #000;
+  transition: transform 0.3s ease;
+  transform: translateX(0%);
+}
+
+#implementing .intro img {
+    margin-bottom: 3%;
+
+}
+
+.ps-image {
+    margin-top: 5%;
+}
+
+
+
+
+
 /******************************************* DEVEX */
 
 
@@ -394,7 +481,6 @@ img {
     font-size: 1.5rem;
     border-bottom: 0.5px solid #ccc;
     padding-bottom: 10px;
-    margin-top: 5px;
 }
 
 .detail-description p {
@@ -644,6 +730,7 @@ img {
     margin-top: 10px;
     font-size: 0.8rem;
     color: black;
+    line-height: 1.3rem !important;
 }
 
 /* This is a media query for screens smaller than 600px in width */
